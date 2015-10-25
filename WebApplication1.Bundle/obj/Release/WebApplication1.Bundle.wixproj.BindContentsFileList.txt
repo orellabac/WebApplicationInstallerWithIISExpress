@@ -1,0 +1,3 @@
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\iisexpress_8_0_RTM_x64_en-US.msi
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.Setup\bin\Release\WebApplication1_Setup.msi
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.Setup\bin\Release\cab1.cab

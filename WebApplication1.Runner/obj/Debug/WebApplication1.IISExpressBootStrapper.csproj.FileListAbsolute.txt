@@ -1,0 +1,7 @@
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\bin\Debug\WebApplication1.IISExpressBootStrapper.exe.config
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\bin\Debug\WebApplication1.IISExpressBootStrapper.exe
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\bin\Debug\WebApplication1.IISExpressBootStrapper.pdb
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\bin\Debug\nunit.framework.dll
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\bin\Debug\nunit.framework.xml
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\obj\Debug\WebApplication1.IISExpressBootStrapper.exe
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\obj\Debug\WebApplication1.IISExpressBootStrapper.pdb

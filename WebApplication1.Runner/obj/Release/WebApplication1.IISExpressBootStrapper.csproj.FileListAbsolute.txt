@@ -1,0 +1,8 @@
+S:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\bin\Release\WebApplication1.IISExpressBootStrapper.exe.config
+S:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\bin\Release\WebApplication1.IISExpressBootStrapper.exe
+S:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\bin\Release\WebApplication1.IISExpressBootStrapper.pdb
+S:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\bin\Release\nunit.framework.dll
+S:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\bin\Release\nunit.framework.xml
+S:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\obj\Release\WebApplication1.IISExpressBootStrapper.csprojResolveAssemblyReference.cache
+S:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\obj\Release\WebApplication1.IISExpressBootStrapper.exe
+S:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.IISExpressBootStrapper\obj\Release\WebApplication1.IISExpressBootStrapper.pdb

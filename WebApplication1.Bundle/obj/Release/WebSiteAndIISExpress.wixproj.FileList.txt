@@ -1,0 +1,6 @@
+obj\Release\Bundle.wixobj
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebSiteAndIISExpress\bin\Release\WebSiteAndIISExpress.exe
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebSiteAndIISExpress\bin\Release\WebSiteAndIISExpress.wixpdb
+obj\Release\WebSiteAndIISExpress.wixproj.BindContentsFileList.txt
+obj\Release\WebSiteAndIISExpress.wixproj.BindOutputsFileList.txt
+obj\Release\WebSiteAndIISExpress.wixproj.BindBuiltOutputsFileList.txt

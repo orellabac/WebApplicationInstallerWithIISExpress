@@ -1,0 +1,3 @@
+obj\Release\DemoUI.wixobj
+obj\Release\Product.wixobj
+obj\Release\UIDialogs.wixobj

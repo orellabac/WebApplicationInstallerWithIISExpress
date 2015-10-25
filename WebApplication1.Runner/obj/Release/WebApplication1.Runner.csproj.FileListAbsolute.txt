@@ -1,0 +1,3 @@
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.Runner\bin\Release\WebApplication1.IISExpressBootStrapper.exe.config
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.Runner\obj\Release\WebApplication1.IISExpressBootStrapper.exe
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.Runner\obj\Release\WebApplication1.IISExpressBootStrapper.pdb

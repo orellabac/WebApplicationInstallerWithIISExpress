@@ -1,0 +1,2 @@
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.Bundle\bin\Release\WebSiteAndIISExpress.exe
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebApplication1.Bundle\bin\Release\WebSiteAndIISExpress.wixpdb

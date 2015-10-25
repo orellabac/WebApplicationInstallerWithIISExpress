@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Bundle Name="WebApplication1.Bundle" Version="1.0.0.0" Manufacturer="mrojas" UpgradeCode="1091da9b-c6cd-4f97-8659-968e730ffbc6">
+		<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" />
+
+		<Chain>
+			<!-- TODO: Define the list of chained packages. -->
+			<!-- <MsiPackage SourceFile="path\to\your.msi" /> -->
+      <MsiPackage SourceFile="..\iisexpress_8_0_RTM_x64_en-US.msi" />
+      <MsiPackage SourceFile="..\WebApplication1.Setup\bin\Release\WebApplication1_Setup.msi"/>
+		</Chain>
+	</Bundle>
+</Wix>

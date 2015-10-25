@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+First we’ll add some properties in a ‘PropertyGroup’: 
+the source of our website and 
+the name of the WiX file we want to build. 
+We also include the path where we should publish all files. 
+In the ‘itemgroups’ we define the temporary files which is the content of the web site 
+and the list of WiX input files
+-->
+
+
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <WebSiteSource>..\WebApplication1\</WebSiteSource>
+    <SetupF>..\Setup\</SetupF>
+    <PublishF>publish\</PublishF>
+    <Publish>$(SetupF)$(PublishF)</Publish>
+    <WebSiteContentCode>WebSiteContent.wxs</WebSiteContentCode>
+    <WebSiteContentObject>WebSiteContent.wixobj</WebSiteContentObject>
+    <MsiOut>bin\Release\WebApplication1_Setup.msi</MsiOut>
+    <WebApplicationProject>..\WebApplication1\WebApplication1.csproj</WebApplicationProject>
+    <WixPath>C:\Program Files (x86)\WiX Toolset v3.10\bin\</WixPath>
+  </PropertyGroup>
+  
+  
+  
+  <!-- Defining group of temporary files which is the content of the web site. -->
+  <ItemGroup>
+    <WebSiteContent Include="$(WebSiteContentCode)" />
+  </ItemGroup>
+
+  <!-- The list of WIX input files -->
+  <ItemGroup>
+    <WixCode Include="Product.wxs" />
+    <WixCode Include="$(WebSiteContentCode)" />
+  </ItemGroup>
+
+  <!-- The list of WIX after candle files -->
+  <ItemGroup>
+    <WixObject Include="Product.wixobj" />
+    <WixObject Include="$(WebSiteContentObject)" />
+  </ItemGroup>
+<!--
+We first have to build our website so we are sure we have the latest build we are deploying. 
+-->
+  <Target Name="Build">
+    <!-- Compile whole solution in release mode -->
+    <MSBuild
+        Projects="..\WebApplicationAndIISInstallerSample.sln"
+        Targets="ReBuild"
+        Properties="Configuration=Release" />
+  </Target>
+
+  <!--
+  We’ll use the build in publish feature of MS build to deploy the website
+  to a new folder so we have only the files we need. (and not the .cs files etc)
+  -->
+  
+  <Target Name="PublishWebsite">
+    <!-- Remove complete publish folder in order to 
+             be sure that evrything will be newly compiled -->
+    <Message Text="Removing publish directory: $(SetupF)"/>
+    <RemoveDir Directories="$(SetupF)" ContinueOnError="false" />
+    <Message Text="Start to publish website" Importance="high" />
+    <MSBuild
+        Projects="$(WebApplicationProject)"
+        Targets="ResolveReferences;_CopyWebApplication"
+        Properties="OutDir=$(Publish)bin\;WebProjectOutputDir=
+                        $(Publish);Configuration=Release" />
+  </Target>
+
+
+<!--
+  Now that we have all the files we need under a temporary folder we can use 
+  the heat.exe tool in the WiX tool belt to harvest the files and create a wxs file.
+  -->
+
+  <Target Name="Harvest">
+    <!-- Harvest all content of published result -->
+    <Exec
+        Command='"$(WixPath)heat" dir $(Publish) -dr INSTALLFOLDER -ke -srd -cg MyWebWebComponents -var var.publishDir -gg -out $(WebSiteContentCode)'
+        ContinueOnError="false"
+        WorkingDirectory="." />
+  </Target>
+
+  <Target Name="WIX">
+    <!--     At last create an installer -->
+    <Exec
+          Command='"$(WixPath)candle" -dpublishDir=$(Publish) -dMyWebResourceDir=. @(WixCode, &apos; &apos;)'
+          ContinueOnError="false"
+          WorkingDirectory="." />
+    <Exec
+      Command='"$(WixPath)light" -out $(MsiOut) @(WixObject, &apos; &apos;)'
+      ContinueOnError="false"
+      WorkingDirectory="." /> 
+
+    <!-- A message at the end -->
+    <Message Text="Install package has been created." />
+  </Target>
+  <!-- Optional target for deleting temporary files. Usually after build -->
+  <Target Name="DeleteTmpFiles">
+    <RemoveDir Directories="$(Publish)" ContinueOnError="false" />
+    <RemoveDir Directories="$(SetupF)" ContinueOnError="false" />
+    <Delete Files="@(WixObject);@(WebSiteContent)" />
+  </Target>
+
+
+
+</Project>

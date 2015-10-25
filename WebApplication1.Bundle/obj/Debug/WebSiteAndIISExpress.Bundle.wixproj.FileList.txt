@@ -1,0 +1,6 @@
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebSiteAndIISExpress\bin\Debug\WebSiteAndIISExpress.exe
+s:\MyDocuments\Visual Studio 2013\Projects\WebApplicationAndIISInstallerSample\WebSiteAndIISExpress\bin\Debug\WebSiteAndIISExpress.wixpdb
+obj\Debug\Bundle.wixobj
+obj\Debug\WebSiteAndIISExpress.Bundle.wixproj.BindContentsFileList.txt
+obj\Debug\WebSiteAndIISExpress.Bundle.wixproj.BindOutputsFileList.txt
+obj\Debug\WebSiteAndIISExpress.Bundle.wixproj.BindBuiltOutputsFileList.txt
